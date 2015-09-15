@@ -24,7 +24,7 @@ namespace MusicBrainz
     /// <returns>List of Annotation</returns>
     public static Annotation Annotation(string query = null, string text = null, string type = null, string name = null, string entity = null, int limit = 25, int offset = 0)
     {
-      var search = Help.SearchToString(MethodBase.GetCurrentMethod(), query, text, type, name, entity);
+      var search = Help.SearchToString(typeof(Search).GetMethod(nameof(Annotation)), query, text, type, name, entity);
       return Help.Find<Annotation>(search, limit, offset, "annotation");
     }
 
@@ -59,7 +59,7 @@ namespace MusicBrainz
       string comment = null, string end = null, string ended = null, string sortname = null, string iso = null,
       string iso1 = null, string iso2 = null, string iso3 = null, string type = null, int limit = 25, int offset = 0)
     {
-      var search = Help.SearchToString(MethodBase.GetCurrentMethod(), query, aid, alias, area, begin, comment, end, ended, sortname, iso, iso1, iso2, iso3, type);
+      var search = Help.SearchToString(typeof(Search).GetMethod(nameof(Area)), query, aid, alias, area, begin, comment, end, ended, sortname, iso, iso1, iso2, iso3, type);
       return Help.Find<Area>(search, limit, offset, "area");
     }
 
@@ -99,7 +99,7 @@ namespace MusicBrainz
       string comment = null, string country = null, string end = null, string ended = null, string gender = null,
       string ipi = null, string sortname = null, string tag = null, string type = null, int limit = 25, int offset = 0)
     {
-      var search = Help.SearchToString(MethodBase.GetCurrentMethod(), query, area, beginarea, endarea, arid, artist, artistaccent, alias, begin, comment, country, end, ended, gender, ipi, sortname, tag, type);
+      var search = Help.SearchToString(typeof(Search).GetMethod(nameof(Artist)), query, area, beginarea, endarea, arid, artist, artistaccent, alias, begin, comment, country, end, ended, gender, ipi, sortname, tag, type);
       return Help.Find<Artist>(search, limit, offset, "artist");
     }
 
@@ -126,7 +126,7 @@ namespace MusicBrainz
     public static Cdstub CdStub(string query = null, string artist = null, string title = null, string barcode = null,
       string comment = null, string tracks = null, string discid = null, int limit = 25, int offset = 0)
     {
-      var search = Help.SearchToString(MethodBase.GetCurrentMethod(), query, artist, title, barcode, comment, tracks, discid);
+      var search = Help.SearchToString(typeof(Search).GetMethod(nameof(CdStub)), query, artist, title, barcode, comment, tracks, discid);
       return Help.Find<Cdstub>(search, limit, offset, "cdstub");
     }
 
@@ -153,7 +153,7 @@ namespace MusicBrainz
     public static Freedb Freedb(string query = null, string artist = null, string title = null, string discid = null, string cat = null,
       string year = null, string tracks = null, int limit = 25, int offset = 0)
     {
-      var search = Help.SearchToString(MethodBase.GetCurrentMethod(), query, artist, title, discid, cat, year, tracks);
+      var search = Help.SearchToString(typeof(Search).GetMethod(nameof(Freedb)), query, artist, title, discid, cat, year, tracks);
       return Help.Find<Freedb>(search, limit, offset, "freedb");
     }
 
@@ -191,7 +191,7 @@ namespace MusicBrainz
       string label = null, string labelaccent = null, string laid = null, string sortname = null, string type = null,
       string tag = null, int limit = 25, int offset = 0)
     {
-      var search = Help.SearchToString(MethodBase.GetCurrentMethod(), query, alias, area, begin, code, comment, country, end, ended, ipi, label, labelaccent, laid, sortname, type, tag);
+      var search = Help.SearchToString(typeof(Search).GetMethod(nameof(Label)), query, alias, area, begin, code, comment, country, end, ended, ipi, label, labelaccent, laid, sortname, type, tag);
       return Help.Find<Label>(search, limit, offset, "label");
     }
 
@@ -225,7 +225,7 @@ namespace MusicBrainz
       string begin = null, string comment = null, string end = null, string ended = null, string lat = null,
       string Long = null, string sortname = null, string type = null, int limit = 25, int offset = 0)
     {
-      var search = Help.SearchToString(MethodBase.GetCurrentMethod(), query, pid, address, alias, area, begin, comment, end, ended, lat, Long, sortname, type);
+      var search = Help.SearchToString(typeof(Search).GetMethod(nameof(Place)), query, pid, address, alias, area, begin, comment, end, ended, lat, Long, sortname, type);
       return Help.Find<Place>(search, limit, offset, "place");
     }
 
@@ -287,7 +287,7 @@ namespace MusicBrainz
       string tid = null, string tnum = null, string tracks = null, string tracksrelease = null, string tag = null,
       string type = null, string video = null, int limit = 25, int offset = 0)
     {
-      var search = Help.SearchToString(MethodBase.GetCurrentMethod(), query, arid, artist, artistname, creditname, comment,
+      var search = Help.SearchToString(typeof(Search).GetMethod(nameof(Recording)), query, arid, artist, artistname, creditname, comment,
         country, date, dur, format, isrc, number, position, primarytype, puid, qdur, recording, recordingaccent, reid,
         release, rgid, rid, secondarytype, status, tid, tnum, tracks, tracksrelease, tag, type, video);
       return Help.Find<Recording>(search, limit, offset, "recording");
@@ -357,7 +357,7 @@ namespace MusicBrainz
       string secondarytype = null, string status = null, string tag = null, string tracks = null,
       string tracksmedium = null, string type = null, int limit = 25, int offset = 0)
     {
-      var search = Help.SearchToString(MethodBase.GetCurrentMethod(), query, field, arid, artist, artistname, asin, barcode,
+      var search = Help.SearchToString(typeof(Search).GetMethod(nameof(Release)), query, field, arid, artist, artistname, asin, barcode,
         catno, comment, country, creditname, date, discids, discidsmedium, format, laid, label, lang, mediums,
         primarytype, puid, quality, reid, release, releaseaccent, rgid, script, secondarytype, status, tag, tracks,
         tracksmedium, type);
@@ -406,7 +406,7 @@ namespace MusicBrainz
       string reid = null, string secondarytype = null, string status = null, string tag = null, string type = null,
       int limit = 25, int offset = 0)
     {
-      var search = Help.SearchToString(MethodBase.GetCurrentMethod(), query, arid, artist, artistname, comment, creditname,
+      var search = Help.SearchToString(typeof(Search).GetMethod(nameof(ReleaseGroup)), query, arid, artist, artistname, comment, creditname,
         primarytype, rgid, releasegroup, releasegroupaccent, releases, release, reid, secondarytype, status, tag, type);
       return Help.Find<Releasegroup>(search, limit, offset, "release-group");
     }
@@ -463,7 +463,7 @@ namespace MusicBrainz
       string iswc = null, string lang = null, string tag = null, string type = null, string wid = null,
       string work = null, string workaccent = null, int limit = 25, int offset = 0)
     {
-      var search = Help.SearchToString(MethodBase.GetCurrentMethod(), query, alias, arid, artist, comment, iswc, lang, tag, type, wid, work, workaccent);
+      var search = Help.SearchToString(typeof(Search).GetMethod(nameof(Work)), query, alias, arid, artist, comment, iswc, lang, tag, type, wid, work, workaccent);
       return Help.Find<Work>(search, limit, offset, "work");
     }
   }
