@@ -1,0 +1,25 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "MusicBrainz.Core Class Library",
+  "authors": [ "ArnaudLocal" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+  "frameworks": {
+    "dnxcore50": {
+      "dependencies": {
+        "Microsoft.CSharp": "4.0.1-beta-23225",
+        "System.Collections": "4.0.11-beta-23225",
+        "System.Linq": "4.0.1-beta-23225",
+        "System.Runtime": "4.0.21-beta-23225",
+        "System.Threading": "4.0.11-beta-23225",
+        "System.Net.Http": "4.0.1-beta-23225"
+      }
+    }
+  },
+  "dependencies": {
+    "System.Net.Requests": "4.0.11-beta-23225",
+    "System.Xml.XDocument": "4.0.11-beta-23225",
+    "System.Xml.XmlSerializer": "4.0.11-beta-23225"
+  }
+}
