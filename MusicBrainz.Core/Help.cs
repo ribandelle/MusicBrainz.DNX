@@ -2,6 +2,7 @@
 using System;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -67,25 +68,31 @@ namespace MusicBrainz
     {
       try
       {
-        var request = WebRequest.Create(url) as HttpWebRequest;
-        if (request == null)
-          return new XElement("");
-
-        
-        request.Headers["UserAgent"] = "MusicBrainze.API/2.0";
-        request.Proxy = WebRequest.DefaultWebProxy;
-        request.Credentials = CredentialCache.DefaultCredentials;
-        request.Proxy.Credentials = CredentialCache.DefaultCredentials;
-        //request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
-        
-        WebResponse response = AsyncHelper.RunSync<WebResponse>(() => request.GetResponseAsync());
-
-        using (var stream = response.GetResponseStream())
+        HttpClientHandler handler = new HttpClientHandler();
+        handler.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
+        handler.Credentials = CredentialCache.DefaultCredentials;
+        handler.Proxy = WebRequest.DefaultWebProxy;
+        handler.Proxy.Credentials = CredentialCache.DefaultCredentials;
+        HttpResponseMessage httpResponse = null;
+        using (var client = new HttpClient(handler))
         {
-          var xml = XDocument.Load(stream);
-          var xsn = new XmlSerializerNamespaces();
-          xsn.Add("ext", "http://musicbrainz.org/ns/ext#-2.0");
-          return xml.Root != null ? xml.Root.Elements().FirstOrDefault() : new XElement("");
+            HttpRequestMessage httpRequest = new HttpRequestMessage(HttpMethod.Get, url);
+            httpRequest.Headers.UserAgent.ParseAdd("MusicBrainz.API/2.0");
+
+            httpResponse = AsyncHelper.RunSync<HttpResponseMessage>(() => client.SendAsync(httpRequest));
+        }
+
+        if(httpResponse == null)
+        {
+            return new XElement("");
+        }
+
+        using (var stream = AsyncHelper.RunSync<System.IO.Stream>(() => httpResponse.Content.ReadAsStreamAsync()))
+        {
+            var xml = XDocument.Load(stream);
+            var xsn = new XmlSerializerNamespaces();
+            xsn.Add("ext", "http://musicbrainz.org/ns/ext#-2.0");
+            return xml.Root != null ? xml.Root.Elements().FirstOrDefault() : new XElement("");
         }
       }
       catch (Exception)

@@ -32,6 +32,6 @@
     }
   },
   "dependencies": {
-    
+    "System.Net.Http": "4.0.1-beta-23225"
   }
 }
