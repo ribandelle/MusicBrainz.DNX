@@ -1,8 +1,8 @@
 ﻿{
   "version": "1.0.0-*",
-  "description": "MusicBrainz.Core Class Library",
+  "description": "MusicBrainz.DNX Class Library",
   "authors": [ "Arnaud Castaner, BigGranu" ],
-  "tags": [ "" ],
+  "tags": [ "musicbrainz" ],
   "projectUrl": "",
   "licenseUrl": "",
   "frameworks": {

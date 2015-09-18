@@ -2,6 +2,20 @@
   "locked": false,
   "version": 1,
   "targets": {
+    "DNX,Version=v4.5.1": {
+      "System.Net.Http/4.0.1-beta-23225": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Net.Http"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      }
+    },
     "DNXCore,Version=v5.0": {
       "Microsoft.CSharp/4.0.1-beta-23225": {
         "type": "package",
@@ -2427,9 +2441,13 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "System.Net.Requests >= 4.0.11-beta-23225",
-      "System.Xml.XDocument >= 4.0.11-beta-23225",
-      "System.Xml.XmlSerializer >= 4.0.11-beta-23225"
+      "System.Net.Http >= 4.0.1-beta-23225"
+    ],
+    "DNX,Version=v4.5.1": [
+      "fx/System.Xml.XDocument >= 4.0.0.0",
+      "fx/System.Xml.XmlSerializer >= 4.0.0.0",
+      "fx/System.Xml.Linq >= 4.0.0.0",
+      "fx/System.Xml >= 4.0.0.0"
     ],
     "DNXCore,Version=v5.0": [
       "Microsoft.CSharp >= 4.0.1-beta-23225",
@@ -2437,7 +2455,10 @@
       "System.Linq >= 4.0.1-beta-23225",
       "System.Runtime >= 4.0.21-beta-23225",
       "System.Threading >= 4.0.11-beta-23225",
-      "System.Net.Http >= 4.0.1-beta-23225"
+      "System.Net.Http >= 4.0.1-beta-23225",
+      "System.Net.Requests >= 4.0.11-beta-23225",
+      "System.Xml.XDocument >= 4.0.11-beta-23225",
+      "System.Xml.XmlSerializer >= 4.0.11-beta-23225"
     ]
   }
 }

@@ -15,6 +15,7 @@ $RECYCLE.BIN/
 *.msp
 
 #Ignore files build by Visual Studio
+project.lock
 *.vsp
 *.psess
 *.obj
