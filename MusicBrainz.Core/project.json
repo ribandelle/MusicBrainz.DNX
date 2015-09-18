@@ -1,11 +1,22 @@
 ﻿{
   "version": "1.0.0-*",
   "description": "MusicBrainz.Core Class Library",
-  "authors": [ "ArnaudLocal" ],
+  "authors": [ "Arnaud Castaner, BigGranu" ],
   "tags": [ "" ],
   "projectUrl": "",
   "licenseUrl": "",
   "frameworks": {
+    "dnx451": {
+      "dependencies": {
+        
+      },
+      "frameworkAssemblies": {
+        "System.Xml.XDocument": "4.0.0.0",
+        "System.Xml.XmlSerializer": "4.0.0.0",
+        "System.Xml.Linq": "4.0.0.0",
+        "System.Xml": "4.0.0.0"
+      }
+    },
     "dnxcore50": {
       "dependencies": {
         "Microsoft.CSharp": "4.0.1-beta-23225",
@@ -13,13 +24,14 @@
         "System.Linq": "4.0.1-beta-23225",
         "System.Runtime": "4.0.21-beta-23225",
         "System.Threading": "4.0.11-beta-23225",
-        "System.Net.Http": "4.0.1-beta-23225"
+        "System.Net.Http": "4.0.1-beta-23225",
+        "System.Net.Requests": "4.0.11-beta-23225",
+        "System.Xml.XDocument": "4.0.11-beta-23225",
+        "System.Xml.XmlSerializer": "4.0.11-beta-23225"
       }
     }
   },
   "dependencies": {
-    "System.Net.Requests": "4.0.11-beta-23225",
-    "System.Xml.XDocument": "4.0.11-beta-23225",
-    "System.Xml.XmlSerializer": "4.0.11-beta-23225"
+    
   }
 }
