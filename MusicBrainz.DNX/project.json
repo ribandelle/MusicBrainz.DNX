@@ -1,9 +1,9 @@
 ﻿{
   "version": "1.0.0-*",
   "description": "MusicBrainz.DNX Class Library",
-  "authors": [ "Arnaud Castaner, BigGranu" ],
+  "authors": [ "Arnaud Castaner", "BigGranu" ],
   "tags": [ "musicbrainz" ],
-  "projectUrl": "",
+  "projectUrl": "https://github.com/ribandelle/MusicBrainz.DNX",
   "licenseUrl": "",
   "frameworks": {
     "dnx451": {
