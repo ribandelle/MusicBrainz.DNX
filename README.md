@@ -1,5 +1,7 @@
-MusicBrainz
-===========
+MusicBrainz.DNX
+================
+
+This project is a fork of BigGranu's original MusicBrainz API for .NET 4.0 Profile. This version is a DNX (package) version, running on both DNX 4.5.1 and DNX Core. A minimum amount of change has been made, and switching from one API to the other should be transparent.
 
 .Net data bindings for [MusicBrainz XML Web Service v2.0](http://musicbrainz.org/doc/Development/XML_Web_Service/Version_2/Search)
 
