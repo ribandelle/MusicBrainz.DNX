@@ -4,7 +4,7 @@
   "authors": [ "Arnaud Castaner", "BigGranu" ],
   "tags": [ "musicbrainz" ],
   "projectUrl": "https://github.com/ribandelle/MusicBrainz.DNX",
-  "licenseUrl": "",
+  "licenseUrl": "https://www.tldrlegal.com/l/mit",
   "frameworks": {
     "dnx451": {
       "dependencies": {
