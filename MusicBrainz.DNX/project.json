@@ -1,5 +1,5 @@
 ﻿{
-  "version": "1.0.0-*",
+  "version": "1.0.1-*",
   "description": "MusicBrainz.DNX Class Library for DNX",
   "authors": [ "Arnaud Castaner", "BigGranu" ],
   "tags": [ "musicbrainz" ],
@@ -10,7 +10,7 @@
   "frameworks": {
     "dnx451": {
       "dependencies": {
-        
+
       },
       "frameworkAssemblies": {
         "System.Xml.XDocument": "4.0.0.0",
