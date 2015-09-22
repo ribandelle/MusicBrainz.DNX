@@ -41,8 +41,8 @@ namespace MusicBrainz
           else
           {
             result += paras[i].Name.ToLower() + ":" + search[i] + "%20AND%20";
-          }         
-        }      
+          }
+        }
       }
 
       return result.LastIndexOf("%20AND%20", StringComparison.Ordinal) > 0
