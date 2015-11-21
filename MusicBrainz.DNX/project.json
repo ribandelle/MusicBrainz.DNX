@@ -1,5 +1,7 @@
 ﻿{
   "version": "1.0.1-rc1-final",
+  "title": "MusicBrainz.DNX",
+  "requireLicenseAcceptance": true,
   "description": "MusicBrainz.DNX Class Library for DNX",
   "authors": [ "Arnaud Castaner", "BigGranu" ],
   "tags": [ "musicbrainz" ],
