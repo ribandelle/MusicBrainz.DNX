@@ -111,7 +111,7 @@ namespace MusicBrainz
           return (T)serializer.Deserialize(o.CreateReader());
         }
       }
-      catch (Exception)
+      catch (Exception ex)
       {
         return default(T);
       }
