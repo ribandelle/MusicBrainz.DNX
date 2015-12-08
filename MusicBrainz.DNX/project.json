@@ -24,13 +24,13 @@
     },
     "dotnet5.4": {
       "dependencies": {
-        "Microsoft.CSharp": "4.0.1-beta-23516",
-        "System.Collections": "4.0.11-beta-23516",
-        "System.Linq": "4.0.1-beta-23516",
-        "System.Runtime": "4.0.21-beta-23516",
-        "System.Net.Requests": "4.0.11-beta-23516",
-        "System.Xml.XDocument": "4.0.11-beta-23516",
-        "System.Xml.XmlSerializer": "4.0.11-beta-23516"
+        "Microsoft.CSharp": "4.0.1-beta-*",
+        "System.Collections": "4.0.11-beta-*",
+        "System.Linq": "4.0.1-beta-*",
+        "System.Runtime": "4.0.21-beta-*",
+        "System.Net.Requests": "4.0.11-beta-*",
+        "System.Xml.XDocument": "4.0.11-beta-*",
+        "System.Xml.XmlSerializer": "4.0.11-beta-*"
       }
     }
   },
