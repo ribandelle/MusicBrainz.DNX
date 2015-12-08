@@ -137,7 +137,7 @@ namespace MusicBrainz.Data
 
     /// <remarks />
     [XmlAttribute("count")]
-    public sbyte Count { get; set; }
+    public int Count { get; set; }
   }
 
   /// <remarks />
