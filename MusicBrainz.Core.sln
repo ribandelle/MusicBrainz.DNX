@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MusicBrainz.DNX", "MusicBrainz.DNX\MusicBrainz.DNX.xproj", "{042EA3C0-3C5B-47B8-8C59-9F66B7223B6F}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MusicBrainz.Core", "MusicBrainz.DNX\MusicBrainz.Core.xproj", "{042EA3C0-3C5B-47B8-8C59-9F66B7223B6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
