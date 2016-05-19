@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Runtime.Remoting.Activation;
 using System.Xml.Schema;
 using System.Xml.Serialization;
