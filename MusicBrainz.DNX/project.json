@@ -11,6 +11,9 @@
     "licenseUrl": "https://tldrlegal.com/l/mit",
     "summary": ".NET data bindings for MusicBrainz XML Web Service v2.0 compatible with .NET Core"
   },
+  "dependencies": {
+
+  },
   "frameworks": {
     "netcoreapp1.0": {
       "imports": "dnxcore50",
@@ -20,19 +23,25 @@
           "version": "1.0.0-rc2-3002702"
         },
         "System.Xml.XmlDocument": "4.0.1-rc2-24027",
-        "System.Net.Http": "4.0.1-rc2-24027",
         "System.Xml.XDocument": "4.0.11-rc2-24027",
         "System.Xml.XmlSerializer": "4.0.11-rc2-24027",
-        "System.Xml.ReaderWriter": "4.0.11-rc2-24027"
+        "System.Xml.ReaderWriter": "4.0.11-rc2-24027",
+
+        "runtime.any.System.Xml.XmlSerializer": "4.0.11-beta-23516"
       }
     },
     "net45": {
       "dependencies": {
-        "Microsoft.Net.Http": "2.2.22"
+
+      },
+      "frameworkAssemblies": {
+        "System.Xml.XDocument": "4.0.0.0",
+        "System.Xml.XmlSerializer": "4.0.0.0",
+        "System.Xml.Linq": "4.0.0.0",
+        "System.Xml": "4.0.0.0",
+        "System.Net.Http": "4.0.0.0",
+        "System.Runtime.Remoting": "4.0.0.0"
       }
     }
-  },
-  "dependencies": {
-
   }
 }

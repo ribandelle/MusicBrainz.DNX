@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Runtime.Remoting.Activation;
 using System.Xml.Schema;
 using System.Xml.Serialization;
 
@@ -26,7 +27,7 @@ namespace MusicBrainz.Data
     public int Count { get; set; }
 
     /// <remarks />
-    [XmlAttribute("offset")]
+    [UrlAttribute("offset")]
     public int Offset { get; set; }
   }
 
